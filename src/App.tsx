@@ -4,6 +4,7 @@ import './App.css';
 import IndividualMovie from './movies/IndividualMovie';
 import { landingPageDTO, movieDTO } from './movies/Movies.model';
 import MoviesList from './movies/MoviesList';
+import Menu from './Menu';
 
 function App() {
 
@@ -45,12 +46,15 @@ function App() {
   })
 
   return (
+    <>
+    <Menu/>
     <div className='container'>
     <h3>In Theaters</h3>
     <MoviesList movies={movies.inTheaters}/>
     <h3>Upcoming Releases</h3>
     <MoviesList movies={movies.upcomingReleases}/>
     </div>
+    </>
   );
 }
 
