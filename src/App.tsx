@@ -41,16 +41,16 @@ function App() {
       })
     }, 1000);
 
-    return ()=> clearTimeout(timerID)
+    return ()=> clearTimeout(timerID) 
   })
 
   return (
-    <>
+    <div className='container'>
     <h3>In Theaters</h3>
     <MoviesList movies={movies.inTheaters}/>
     <h3>Upcoming Releases</h3>
     <MoviesList movies={movies.upcomingReleases}/>
-    </>
+    </div>
   );
 }
 
