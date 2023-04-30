@@ -3,7 +3,7 @@ import { movieDTO } from './Movies.model'
 import css from './IndividualMovie.module.css'
 
 export default function IndividualMovie(props:movieDTO) {
-    const buildLink = () => `./movie.${props.id}`
+    const buildLink = () => `./movies.${props.id}`
   return (
     <>
     <div className={css.div}>
