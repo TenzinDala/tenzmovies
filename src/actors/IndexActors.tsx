@@ -1,11 +1,12 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 export default function IndexActors() {
   return (
     <>
     <div>Actors</div>
-    <a className='btn btn-primary' href='/actors/create'>Create Actor</a>
-    <a className='btn btn-primary' href='/actors/edit'>Edit Actor</a>
+    <Link className='btn btn-primary' to='/actors/create'>Create Actor</Link>
+    <Link className='btn btn-primary' to='/actors/edit'>Edit Actor</Link>
     </>
   )
 }
