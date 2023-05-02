@@ -10,19 +10,19 @@ export default function Menu() {
             <div className="collapse navbar-collapse" >
                 <ul className="navbar-nav mr-auto">
                     <li className="nav-item active">
-                     <a className="nav-link" href="/genres">Genres</a> 
+                     <Link className="nav-link" to="/genres">Genres</Link> 
                     </li>
                     <li className="nav-item active">
-                     <a className="nav-link" href="/movie/filter">Filter Movies</a> 
+                     <Link className="nav-link" to="/movie/filter">Filter Movies</Link> 
                     </li>
                     <li className="nav-item active">
-                     <a className="nav-link" href="/actors">Actors</a> 
+                     <Link className="nav-link" to="/actors">Actors</Link> 
                     </li>
                     <li className="nav-item active">
-                     <a className="nav-link" href="/movietheaters">Movie Theaters</a> 
+                     <Link className="nav-link" to="/movietheaters">Movie Theaters</Link> 
                     </li>
                     <li className="nav-item active">
-                     <a className="nav-link" href="/movies/create">Create a Movie</a> 
+                     <Link className="nav-link" to="/movies/create">Create a Movie</Link> 
                     </li>
 
                 </ul>
