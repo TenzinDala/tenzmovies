@@ -11,25 +11,28 @@ import LandingPage from "./movies/LandingPage";
 import CreateMovieTheater from "./movietheaters/CreateMovieTheater";
 import EditMovieTheaters from "./movietheaters/EditMovieTheaters";
 import IndexMovieTheaters from "./movietheaters/IndexMovieTheaters";
+import RedirectLandingPage from "./utils/RedirectLandingPage";
 
 const route = [
     {path: '/genres', component: IndexGenres , exact:true},
     {path: '/genres/create', component: CreateGenre},
-    {path: '/genres/edit', component: EditGenre},
+    {path: '/genres/edit/:id', component: EditGenre},
 
     {path: '/actors', component: IndexActors , exact:true},
     {path: '/actors/create', component: CreateActor},
-    {path: '/actors/edit', component: EditActor},
+    {path: '/actors/edit/:id', component: EditActor},
     
     {path: '/movietheaters', component: IndexMovieTheaters , exact:true},
     {path: '/movietheaters/create', component: CreateMovieTheater},
-    {path: '/movietheaters/edit', component: EditMovieTheaters},
+    {path: '/movietheaters/edit/:id', component: EditMovieTheaters},
 
     {path: '/movies/create', component: CreateMovie },
-    {path: '/filter/edit', component: EditMovie},
+    {path: '/movies/edit/:id', component: EditMovie},
     {path: '/movie/filter', component: FilterMovies},
 
-    {path: '/', component: LandingPage , exact : true}
+    {path: '/', component: LandingPage , exact : true},
+    {path: '*', component: RedirectLandingPage}
+
 ];
 
 export default route;
