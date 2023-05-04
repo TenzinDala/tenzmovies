@@ -1,7 +1,9 @@
-import { Field, Form, Formik } from 'formik'
+import { ErrorMessage, Field, Form, Formik } from 'formik'
 import React from 'react'
 import { Link } from 'react-router-dom'
 import Button from '../utils/Button'
+import * as Yup from 'yup'
+import TextField from '../forms/TextField'
 
 export default function CreateGenre() {
   return (
@@ -14,12 +16,13 @@ export default function CreateGenre() {
     onSubmit={value => {
       console.log(value)
     }}
+    validationSchema={Yup.object({
+      name: Yup.string().required("This field is required!!!").min(2, 'Too Short!').max(50, 'Too Long!').FirstLetterUppercase()
+      
+    })}
     >
       <Form action="">
-        <div className="mb-3">
-          <label htmlFor="name">Name</label>
-          <Field placeholder = "Enter your name" id = "name" name = 'name' className="form-control"></Field>
-        </div>
+        <TextField displayName="Name" text='name'/>
         <Button type='submit'>Save Changes</Button>
         <Link to={'/genres'} className='btn btn-primary'>Cancel</Link>
 
