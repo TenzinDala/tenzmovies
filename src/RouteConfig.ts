@@ -13,7 +13,7 @@ import EditMovieTheaters from "./movietheaters/EditMovieTheaters";
 import IndexMovieTheaters from "./movietheaters/IndexMovieTheaters";
 import RedirectLandingPage from "./utils/RedirectLandingPage";
 
-const route = [
+const routes = [
     {path: '/genres', component: IndexGenres , exact:true},
     {path: '/genres/create', component: CreateGenre},
     {path: '/genres/edit/:id', component: EditGenre},
@@ -35,4 +35,4 @@ const route = [
 
 ];
 
-export default route;
+export default routes;
