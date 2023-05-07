@@ -5,6 +5,7 @@ import TextField from '../forms/TextField'
 import Button from '../utils/Button'
 import { Link } from 'react-router-dom'
 import * as Yup from "yup"
+import Map from '../utils/Map'
 
 export default function MovieTheaterForm(props: MovieTheaterFormInterface) {
   return (
@@ -20,7 +21,9 @@ export default function MovieTheaterForm(props: MovieTheaterFormInterface) {
         {(formikProps) => (
             <Form>
                 <TextField displayName='Name' text='name'/>
-
+                <div style={{marginBottom : '1rem'}}>
+                    <Map/>
+                </div>
                 <Button disabled={formikProps.isSubmitting} type='submit'>Save Changes</Button>
                 <Link className="btn btn-secondary" to="/movieTheaters">Cancel</Link>
             </Form>
