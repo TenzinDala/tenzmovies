@@ -7,6 +7,7 @@ import { ActorCreationDTO } from './actorsmodel'
 import * as Yup from 'yup'
 import DateField from './DateField'
 import ImageField from './ImageField'
+import MarkdownField from './MarkdownField'
 
 export default function ActorForm(props: ActorFormProps) {
   return (
@@ -25,6 +26,7 @@ export default function ActorForm(props: ActorFormProps) {
                 <TextField displayName='name' text = "name"/>
                 <DateField displayName='Date of Birth' field='dateOfBirth'/>
                 <ImageField displayName='Picture' field="picture" imageURL={props.model.PictureURL}/>
+                <MarkdownField displayName='Biography' field="biography"/>
                 <Button disabled={formikProps.isSubmitting} type='submit'>Save Changes</Button>
                 <Link to="/actors" className='btn btn-secondary'>Cancel</Link>
             </Form>
