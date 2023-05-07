@@ -6,7 +6,8 @@ export default function EditActor() {
     <>
     <div>EditActor</div>
     <ActorForm model = {{name: "Tanjiro Kamada", dateOfBirth : new Date("1996-06-01T00:00:00"),
-    PictureURL: "https://www.looper.com/img/gallery/tanjiros-greatest-power-in-demon-slayer-isnt-what-you-think/l-intro-1620874317.jpg"
+    PictureURL: "https://www.looper.com/img/gallery/tanjiros-greatest-power-in-demon-slayer-isnt-what-you-think/l-intro-1620874317.jpg",
+    biography : "# Something"
   }} onSubmit={value => console.log(value)}/>
     </>
   )
